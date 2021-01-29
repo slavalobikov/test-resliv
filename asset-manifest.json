@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/test-resliv/6/static/css/main.7edc666b.chunk.css",
+    "main.js": "/test-resliv/6/static/js/main.03b17052.chunk.js",
+    "main.js.map": "/test-resliv/6/static/js/main.03b17052.chunk.js.map",
+    "runtime-main.js": "/test-resliv/6/static/js/runtime-main.f96ee6c7.js",
+    "runtime-main.js.map": "/test-resliv/6/static/js/runtime-main.f96ee6c7.js.map",
+    "static/css/2.f3f01324.chunk.css": "/test-resliv/6/static/css/2.f3f01324.chunk.css",
+    "static/js/2.38dfda24.chunk.js": "/test-resliv/6/static/js/2.38dfda24.chunk.js",
+    "static/js/2.38dfda24.chunk.js.map": "/test-resliv/6/static/js/2.38dfda24.chunk.js.map",
+    "index.html": "/test-resliv/6/index.html",
+    "static/css/2.f3f01324.chunk.css.map": "/test-resliv/6/static/css/2.f3f01324.chunk.css.map",
+    "static/css/main.7edc666b.chunk.css.map": "/test-resliv/6/static/css/main.7edc666b.chunk.css.map",
+    "static/js/2.38dfda24.chunk.js.LICENSE.txt": "/test-resliv/6/static/js/2.38dfda24.chunk.js.LICENSE.txt",
+    "static/media/preloader .709ad798.svg": "/test-resliv/6/static/media/preloader .709ad798.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f96ee6c7.js",
+    "static/css/2.f3f01324.chunk.css",
+    "static/js/2.38dfda24.chunk.js",
+    "static/css/main.7edc666b.chunk.css",
+    "static/js/main.03b17052.chunk.js"
+  ]
+}
