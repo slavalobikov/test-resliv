@@ -1,0 +1,14 @@
+.employees {
+    background-color: whitesmoke;
+    height: 100%;
+}
+
+.fl {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    margin:20px
+}

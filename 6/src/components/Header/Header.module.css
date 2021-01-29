@@ -1,0 +1,20 @@
+.header {
+    background-color: #fafafa;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.active {
+    color:gold;
+}
+
+.header a {
+    text-decoration: none;
+}
+
+.link {
+    margin-left:50px;
+}
