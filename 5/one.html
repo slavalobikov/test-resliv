@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>one</title>
+    <link rel="stylesheet" type="text/css" href="./one.css">
+
+</head>
+<body>
+
+    <div class="one">
+        <h1>one</h1>
+
+        <div>
+            <h4>CallBack для всех полей</h4>
+            <input id="callSet" type="textarea">
+            <p>Пример: alert('hello world')</p>
+
+        </div>
+
+        <div class="one__container">
+            <div class="one__container__card">
+                <h1>Загрузить localStorage</h1>
+                <div>
+                    <h4>Ключ</h4>
+                    <input  id="keySet" type="text">
+                </div>
+                
+                <div>
+                    <h4>Значение</h4>
+                    <input id="itemSet" type="text">
+                </div>
+
+
+
+                <div>
+                    <button id="btnSet" class="btn">Загрузить данные</button>
+                </div>
+
+
+            </div>
+
+            <div class="one__container__card">
+                <h1>Удалить из localStorage</h1>
+                <div>
+                    <h4>Ключ</h4>
+                    <input class="keyDelete" type="text">
+                </div>
+
+                <div>
+                    <button id="btnDelete" class="btn">Удалить данные</button>
+                </div>
+
+
+            </div>
+
+
+            <div class="one__container__card">
+                <h1>Получить из localStorage</h1>
+                <div>
+                    <h4>Ключ</h4>
+                    <input id="getKey" type="text">
+                </div>
+
+                <div>
+                    <button id="btnGet" class="btn">Получить данные</button>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="two">
+        <h2>two</h2>
+        <iframe width="100%" src="./two.html/" id="iframe" >Браузер устарел</iframe>
+    </div>
+    <script src="./one.js"></script>
+
+</body>
+</html>

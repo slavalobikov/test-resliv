@@ -102,9 +102,6 @@ for (let i =0; i<color.length; i++) {
 
     }
 
-    /*if (!!obj.color[i]) {
-        color[(obj.color[i]) -1].checked = true
-    }*/
 }
 
 for (let i=0; i < color.length; i++) {
@@ -159,19 +156,3 @@ for (let i =0; i<options.length; i++) {
     })
 }
 
-//options[1].selected = true;
-
-
-
-
-
-
-
-
-
-
-/*
-params = new URLSearchParams(
-    new URL(`http://domain.com/filter${window.location.search}`).search
-)
-console.log([...params])*/
