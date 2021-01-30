@@ -1,11 +1,51 @@
 let str = window.location.search
+let size = document.getElementsByClassName('radio')
+
 
 
 let queryString = window.location.search.slice(1);
 
-let obj = {}
+let obj = {
+    size:null,
+    color:[],
+    manufacturer:[],
+}
 
-if (queryString) {
+const path = () => {
+    let history = '?';
+    let size = '';
+    let colors = '';
+    let man = '';
+    const func = (i, name) => {
+        return `&${name}=${obj.color[i]}`
+    }
+    const funcMan = (i) => {
+        return `&manufacturer=${obj.manufacturer[i]}`
+    }
+    if (!obj.color) {
+
+    } else if (!!obj.color) {
+        for (let j = 0; j < obj.color.length; j++) {
+            colors = colors + func(j, 'color')
+        }
+    }
+    if (!!obj.size) {
+        size =`&size=${obj.size}`;
+    }
+    if (!obj.manufacturer){
+
+    } else if (!!obj.manufacturer) {
+        for (let j = 0; j < obj.manufacturer.length; j++) {
+            man = man + funcMan(j);
+        }
+    }
+
+
+    console.log(`${history}${size}${colors}${man}`)
+
+}
+
+if (!!queryString) {
     queryString = queryString.split('#')[0];
     let arr = queryString.split('&');
 
@@ -37,7 +77,6 @@ if (queryString) {
 
 }
 
-let size = document.getElementsByClassName('radio')
 
 if (obj.size === 'm') {
     size[1].checked = true
@@ -49,17 +88,23 @@ if (obj.size === 'm') {
 for (let i = 0; i < size.length; i++) {
     size[i].addEventListener('click', (e) => {
         obj.size = size[i].value
-        console.log('path', `/filter?size=${size[i].value}`)
-
+        path()
     })
 }
 
 let color = document.getElementsByClassName('checkbox')
 
 for (let i =0; i<color.length; i++) {
-    if (!!obj.color[i]) {
+    if (!obj.color) {
+
+    }else if (!!obj.color[i]) {
         color[(obj.color[i]) -1].checked = true
+
     }
+
+    /*if (!!obj.color[i]) {
+        color[(obj.color[i]) -1].checked = true
+    }*/
 }
 
 for (let i=0; i < color.length; i++) {
@@ -67,35 +112,59 @@ for (let i=0; i < color.length; i++) {
         return `&color=${obj.color[i]}`
     }
     color[i].addEventListener('click',(e) => {
-        console.log('color[0].checked',color[i].checked )
         if (color[i].checked === true) {
             obj.color.push(color[i].value)
-        } /*else if (color[i].checked === false) {
-            obj.color.filter(el => false)
-        }*/
-console.log('obj', obj)
-        let colors = '';
-        for (let j = 0; j < obj.color.length; j++) {
-             colors = colors + func(j)
+        } else if (color[i].checked === false) {
+            obj.color = obj.color.filter(el => el !== color[i].value)
         }
-        console.log('colors', colors)
-    }  )
+
+        path()
+        }
+
+
+    )
 }
 
+const options = document.getElementsByClassName("option")
+
+
+for (let i =0; i < options.length; i++) {
+    if (!obj.manufacturer) {
+
+    } else if (!!obj.manufacturer[i]) {
+        for (let j = 0; j < options.length; j++ ){
+            if (obj.manufacturer[i] === "b%26c") {
+                options[1].selected = true;
+            }
+            if (obj.manufacturer[i] === options[j].value) {
+
+                options[j].selected=true;
+            }
+        }
+    }
+}
+
+for (let i =0; i<options.length; i++) {
+    options[i].addEventListener('click', () => {
+
+        let arr = []
+        for (let j =0; j <options.length; j++) {
+
+            if (options[j].selected) {
+                 arr.push(options[j].value)
+                obj.manufacturer = arr;
+            }
+        }
+        path()
+    })
+}
+
+//options[1].selected = true;
 
 
 
 
 
-
-
-/*
-window.location.search = `?size=${obj.size}&color=1&color=2&manufacturer=aaa&manufacturer=ddd`
-*/
-console.log('obj', window.location.search)
-
-console.log('str', obj)
-console.log(window.location)
 
 
 
